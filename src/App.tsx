@@ -9,8 +9,11 @@ function App() {
  
 
   const onclick=()=>{
-    alert('clicked')
-    setLoading(!loading)
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+
+    },3000)
   }
 
   const [loading,setLoading]=useState<boolean>(false)
