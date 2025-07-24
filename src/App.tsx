@@ -1,45 +1,22 @@
-
-import {  useState } from 'react'
 import './App.css'
-import Button from './components/Button/Button'
-import logo from '/vite.svg'
+import Media from './components/Media/Media'
+
+
 
 function App() {
 
- 
-
-  const onclick=()=>{
-    setLoading(true)
-    setTimeout(()=>{
-      setLoading(false)
-
-    },3000)
-  }
-
-  const [loading,setLoading]=useState<boolean>(false)
-
 
   return (
-    <div className='w-full h-screen flex flex-col gap-2 items-center justify-center bg-slate-900'>
-      <Button  type='button' 
-        classes='hover:bg-blue-300 '
-        onClick={onclick}
-        loading={loading}
-        varient='primary'
-        >
-          submit
-          <img src={logo} alt="vite logo" className='w-4 h-4'/>
-      </Button>
-      
-      <Button  type='button' 
-        classes='py-2 px-4 hover:bg-purple-500 '
-        disabled
-        varient='secondary'
-        >
-          <img src={logo} alt="vite logo" className='w-4 h-4'/>
-          send
-      
-      </Button>
+    <div className='w-full h-screen overflow-auto flex flex-col gap-2 p-10 bg-slate-900 font-open-sans '>
+      <Media type='image' src='https://picsum.dev/300/200' 
+      containerClasses='w-[20%] h-[35%] bg-red-500 rounded-lg'
+      mediaClasses='w-full h-full object-cover rounded-lg'/>
+
+      <Media type='video' src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+      containerClasses='w-[70%] h-[60%] '
+      mediaClasses='w-full h-full object-cover'
+      controls
+      autoPlay/>
     </div>
   )
 }

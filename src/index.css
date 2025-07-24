@@ -4,4 +4,6 @@
     --color-primary:oklch(0.5853 0.0834 239.93);
     --color-secondary:oklch(0.7187 0.0834 222.99);
     --color-ternary:oklch(0.752 0.0834 199.69);
+    --font-open-sans:"Open Sans", sans-serif;
+
 }
