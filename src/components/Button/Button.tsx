@@ -5,7 +5,7 @@ import { Loader } from './utility'
 
 const Button :React.FC<ButtonTypes> = ({children,type,classes,onClick,loading=false,varient,size,...restprops}) => {
 
-  const className=getBtnClasses({varient,loading,size})
+  const className=getBtnClasses({varient,loading,classes,size})
 
   return (
    <button type={type} className={className} {...restprops}onClick={onClick} disabled={loading}>

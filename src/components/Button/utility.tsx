@@ -17,6 +17,7 @@ const getBtnClasses=({varient,loading,classes,size}:ButtonTypes)=>{
     },
     classes
 )
+console.log(classes)
 return className
 
 }
